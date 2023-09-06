@@ -1,0 +1,24 @@
+[
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.armor",
+        "name": "generic.armor",
+        "amount": 0,
+        "operation": "addition",
+        "id": "32008bdd-3d59-481f-967f-38c584bad9cd",
+        "slot": [
+          "head",
+          "chest",
+          "legs",
+          "feet"
+        ]
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{HideFlags:2}"
+  }
+]

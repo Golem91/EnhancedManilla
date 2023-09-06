@@ -3,7 +3,7 @@
     "entity": "this",
     "scores": {
       "mana": {
-        "min": 20
+        "min": 100
       }
     }
   }

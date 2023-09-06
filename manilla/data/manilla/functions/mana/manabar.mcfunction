@@ -1,5 +1,5 @@
 #fill update mana indicator
-execute store result storage manilla:qnt mana int 1 run scoreboard players get @s mana
+execute store result storage manilla:qnt mana int 0.2 run scoreboard players get @s mana
 function manilla:mana/manaattri with storage manilla:qnt
 
 #refill mana when in mana pool

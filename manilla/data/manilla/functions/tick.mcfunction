@@ -100,3 +100,8 @@ execute as @e[type=minecraft:interaction,nbt={attack:{}}] at @s run function man
 execute at @e[type=interaction,tag=marker] positioned ~ ~1 ~ run function manilla:ray/particle
 #reset click
 scoreboard players reset @a click
+
+execute as @a[nbt=!{Inventory:[{Slot:103b,tag:{HideFlags:2}}]}] run item modify entity @a armor.head manilla:disable_armor
+execute as @a[nbt=!{Inventory:[{Slot:102b,tag:{HideFlags:2}}]}] run item modify entity @a armor.chest manilla:disable_armor
+execute as @a[nbt=!{Inventory:[{Slot:101b,tag:{HideFlags:2}}]}] run item modify entity @a armor.legs manilla:disable_armor
+execute as @a[nbt=!{Inventory:[{Slot:100b,tag:{HideFlags:2}}]}] run item modify entity @a armor.feet manilla:disable_armor
