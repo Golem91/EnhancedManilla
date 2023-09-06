@@ -1,0 +1,2 @@
+$execute as @s[nbt={UUID:$(UUID)}] unless predicate manilla:sneaking as @e[type=interaction,nbt={Passengers:[{ArmorItems:[{},{},{},{tag:{UUID:$(UUID)}}]}]}] at @s run tp @s ~ -100 ~
+$execute as @s[nbt={UUID:$(UUID)}] unless predicate manilla:sneaking as @e[type=interaction,nbt={Passengers:[{ArmorItems:[{},{},{},{tag:{UUID:$(UUID)}}]}]}] at @s run kill @s

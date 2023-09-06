@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:armor_stand",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"Block Placer\",\"italic\":false}'},EntityTag:{CustomNameVisible:0b,NoGravity:0b,Invulnerable:1b,Small:1b,Marker:1b,Invisible:1b,NoBasePlate:1b,PersistenceRequired:1b,Tags:[\"manilla\",\"init\"]}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

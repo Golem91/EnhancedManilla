@@ -1,0 +1,36 @@
+{
+    "values": [
+      "minecraft:air",
+      "minecraft:cave_air",
+      "minecraft:void_air",
+      "#minecraft:buttons",
+      "#minecraft:all_signs",
+      "minecraft:grass",
+      "minecraft:tall_grass",
+      "minecraft:water",
+      "minecraft:torch",
+      "minecraft:redstone_torch",
+      "#minecraft:flowers",
+      "#minecraft:flower_pots",
+      "minecraft:seagrass",
+      "minecraft:tall_seagrass",
+      "#minecraft:coral_plants",
+      "minecraft:sugar_cane",
+      "minecraft:wheat",
+      "minecraft:potatoes",
+      "minecraft:carrots",
+      "minecraft:tripwire",
+      "minecraft:beetroots",
+      "minecraft:lever",
+      "minecraft:redstone_torch",
+      "minecraft:redstone_wire",
+      "minecraft:repeater",
+      "minecraft:comparator",
+      "minecraft:brewing_stand",
+      "minecraft:wall_torch",
+      "minecraft:redstone_wall_torch",
+      "minecraft:end_portal",
+      "minecraft:nether_portal"
+    ]
+  }
+  
