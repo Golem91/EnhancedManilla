@@ -6,9 +6,16 @@ function manilla:ray/limitcount with storage manilla:uuid2
 execute as @a run function manilla:ray/nosneak with storage manilla:uuid2 
 
 #select block
-execute unless block ~ ~ ~ #manilla:unbreakable if score @s count matches ..9 align xyz positioned ~0.5 ~ ~0.5 summon minecraft:interaction run function manilla:ray/init with storage manilla:uuid2
-execute unless block ~ ~ ~ #manilla:unbreakable if score @s count matches ..9 run playsound minecraft:entity.item_frame.remove_item block @a ~ ~ ~
-execute unless block ~ ~ ~ #manilla:unbreakable if score @s count matches 10.. run playsound minecraft:entity.skeleton.step block @a ~ ~ ~
+execute unless score @s count matches 1.. unless score @s count matches ..1 run scoreboard players set @s count 0
+execute unless block ~ ~ ~ #manilla:unbreakable if score @s count matches ..9 align xyz positioned ~0.5 ~ ~0.5 unless entity @e[type=interaction,sort=nearest,distance=..0.4] run function manilla:ray/init with storage manilla:uuid2
+execute unless block ~ ~ ~ #manilla:unbreakable unless score @s count matches ..9 run playsound minecraft:entity.skeleton.step block @a ~ ~ ~
+
+#add enchantment tags to interaction & remove uinit tag
+execute if entity @s[tag=silk_touch] as @e[type=interaction,tag=uinit] run tag @s add silk_touch
+execute if entity @s[tag=fortuneI] as @e[type=interaction,tag=uinit] run tag @s add fortuneI
+execute if entity @s[tag=fortuneII] as @e[type=interaction,tag=uinit] run tag @s add fortuneII
+execute if entity @s[tag=fortuneIII] as @e[type=interaction,tag=uinit] run tag @s add fortuneIII
+tag @e[type=interaction,tag=marker,tag=uinit] remove uinit
 
 kill @s
 

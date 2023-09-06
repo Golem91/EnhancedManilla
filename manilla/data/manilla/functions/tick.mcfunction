@@ -89,11 +89,14 @@ execute as @e[type=armor_stand,tag=raycast] at @s if block ~ ~ ~ #manilla:permea
 execute as @e[type=armor_stand,tag=raycast] run scoreboard players add @s distance 1
 execute as @e[type=armor_stand,tag=raycast] at @s unless block ~ ~ ~ #manilla:permeable run function manilla:ray/kill
 #failed to execute of too less mana
-execute as @a[nbt={SelectedItem:{tag:{CustomModelData:1}}},predicate=manilla:click,predicate=manilla:breaker_basic] at @s run playsound minecraft:entity.skeleton.step block @s ~ ~ ~
+execute as @a[nbt={SelectedItem:{tag:{CustomModelData:1}}},predicate=manilla:click,predicate=!manilla:breaker_basic] at @s run playsound minecraft:entity.skeleton.step block @s ~ ~ ~
 #max distance for raycasting distance=... /2 =>25 blocks
 execute as @e[type=armor_stand,tag=raycast,scores={distance=50..}] run kill @s
 #break block detection
-execute as @e[tag=marker] store result score @s health run data get entity @s Health
-execute as @e[tag=marker,type=slime] if score @s health matches ..96 run function manilla:ray/hit 
+execute as @e[type=minecraft:interaction,nbt={attack:{}}] at @s run function manilla:ray/leftclick
+#modify block detection
+
+#display particles at selected block location
+execute at @e[type=interaction,tag=marker] positioned ~ ~1 ~ run function manilla:ray/particle
 #reset click
 scoreboard players reset @a click
