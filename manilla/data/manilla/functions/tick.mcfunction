@@ -76,7 +76,7 @@ execute as @a run function manilla:healthcont/cont_set
 #>mana
 execute as @a run function manilla:mana/manabar
 #set creative players mana to max
-scoreboard players set @a[gamemode=creative] mana 20
+scoreboard players set @a[gamemode=creative] mana 100
 
 #>raycasting
 execute as @a[nbt={SelectedItem:{tag:{CustomModelData:1}}},predicate=manilla:click,predicate=manilla:breaker_basic] at @s run function manilla:ray/summon
@@ -97,7 +97,13 @@ execute as @e[type=minecraft:interaction,nbt={attack:{}}] at @s run function man
 #modify block detection
 
 #display particles at selected block location
-execute at @e[type=interaction,tag=marker] positioned ~ ~1 ~ run function manilla:ray/particle
+execute as @e[type=interaction,tag=marker] unless score @s count matches 0.. unless score @s count matches ..0 run scoreboard players set @s count 0
+execute as @e[type=interaction,tag=marker] at @s if score @s count matches 0 run function manilla:ray/particle {color:"0.533 0.000 0.839"}
+execute as @e[type=interaction,tag=marker] at @s if score @s count matches 1 run function manilla:ray/particle {color:"0.839 0 0.796"}
+execute as @e[type=interaction,tag=marker] at @s if score @s count matches 2 run function manilla:ray/particle {color:"0.839 0 0.349"}
+execute as @e[type=interaction,tag=marker] at @s if score @s count matches 3 run function manilla:ray/particle {color:"0.839 0 0"}
+
+
 #reset click
 scoreboard players reset @a click
 
