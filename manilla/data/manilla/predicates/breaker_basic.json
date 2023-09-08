@@ -1,9 +1,14 @@
 {
-  "condition": "minecraft:entity_scores",
+  "condition": "minecraft:entity_properties",
   "entity": "this",
-  "scores": {
-    "mana": {
-      "min": 1
+  "predicate": {
+    "equipment": {
+      "mainhand": {
+        "items": [
+          "minecraft:warped_fungus_on_a_stick"
+        ],
+        "nbt": "{tag:{CustomModelData:1}}"
+      }
     }
   }
 }

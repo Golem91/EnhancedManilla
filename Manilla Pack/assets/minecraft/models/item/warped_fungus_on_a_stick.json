@@ -1,9 +1,7 @@
 {
-	"credit": "Made with Blockbench",
 	"parent": "minecraft:item/handheld_rod",
 	"textures": {
-		"1": "assets:item/warped_fungus_on_a_stick/0",
-		"particle": "assets:item/warped_fungus_on_a_stick/0"
+		"layer0": "minecraft:item/warped_fungus_on_a_stick"
 	},
 	"overrides": [
 		{"predicate": {"custom_model_data": 1}, "model": "minecraft:item/warped_fungus_on_a_stick/1"},

@@ -1,9 +1,7 @@
 {
-	"credit": "Made with Blockbench",
 	"parent": "minecraft:item/handheld_rod",
 	"textures": {
-		"1": "assets:item/carrot_on_a_stick/0",
-		"particle": "assets:item/carrot_on_a_stick/0"
+		"layer0": "minecraft:item/carrot_on_a_stick"
 	},
 	"overrides": [
 		{"predicate": {"custom_model_data": 1}, "model": "minecraft:item/carrot_on_a_stick/1"},
