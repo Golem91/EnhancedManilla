@@ -1,0 +1,15 @@
+{
+	"parent": "minecraft:item/generated",
+	"textures": {
+	  "layer0": "minecraft:item/black_dye"
+	},
+	"overrides": [
+	  {
+		"predicate": {
+		  "custom_model_data": 1
+		},
+		"model": "minecraft:item/black_dye_t"
+	  }
+	]
+  }
+  
