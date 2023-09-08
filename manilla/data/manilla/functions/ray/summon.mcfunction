@@ -6,4 +6,9 @@ execute if entity @s[nbt={SelectedItem:{tag:{Enchantments:[{id:"minecraft:silk_t
 execute if entity @s[nbt={SelectedItem:{tag:{Enchantments:[{id:"minecraft:fortune",lvl:1s}]}}}] as @e[type=armor_stand,tag=raycast,tag=uinit] run tag @s add fortuneI
 execute if entity @s[nbt={SelectedItem:{tag:{Enchantments:[{id:"minecraft:fortune",lvl:2s}]}}}] as @e[type=armor_stand,tag=raycast,tag=uinit] run tag @s add fortuneII
 execute if entity @s[nbt={SelectedItem:{tag:{Enchantments:[{id:"minecraft:fortune",lvl:3s}]}}}] as @e[type=armor_stand,tag=raycast,tag=uinit] run tag @s add fortuneIII
+#type
+execute if entity @s[predicate=manilla:breaker_basic] as @e[type=armor_stand,tag=raycast,tag=uinit] run tag @s add basic
+execute if entity @s[predicate=manilla:breaker_advanced] as @e[type=armor_stand,tag=raycast,tag=uinit] run tag @s add advanced
+execute if entity @s[predicate=manilla:breaker_elite] as @e[type=armor_stand,tag=raycast,tag=uinit] run tag @s add elite
+
 tag @e[tag=uinit] remove uinit

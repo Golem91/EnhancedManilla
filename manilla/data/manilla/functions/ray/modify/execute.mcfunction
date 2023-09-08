@@ -25,8 +25,8 @@ execute at @s if block ~ ~ ~ minecraft:mangrove_log run setblock ~ ~ ~ minecraft
 execute at @s if block ~ ~ ~ minecraft:warped_stem run setblock ~ ~ ~ minecraft:stripped_warped_stem
 execute at @s if block ~ ~ ~ minecraft:crimson_stem run setblock ~ ~ ~ minecraft:stripped_crimson_stem
 #> pumpkin
+execute at @s if block ~ ~ ~ minecraft:pumpkin run summon item ~ ~ ~ {Item:{id:"minecraft:pumpkin_seeds",Count:4}}
 execute at @s if block ~ ~ ~ minecraft:pumpkin run setblock ~ ~ ~ minecraft:carved_pumpkin
-execute at @s if block ~ ~ ~ minecraft:carved_pumpkin run summon item ~ ~ ~ {Item:{id:"minecraft:pumpkin_seeds",Count:4}}
 
 #> template
 #execute if entity @a[tag=nonsneaking] at @s if block ~ ~ ~ air run setblock ~ ~ ~ cave_air

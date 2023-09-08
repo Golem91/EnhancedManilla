@@ -1,0 +1,2 @@
+$execute as @e[type=interaction,tag=marker,nbt={Passengers:[{ArmorItems:[{},{},{},{tag:{UUID:$(UUID)}}]}]}] run kill @s
+$execute as @e[type=armor_stand,tag=marker,nbt={ArmorItems:[{},{},{},{tag:{UUID:$(UUID)}}]}] run kill @s

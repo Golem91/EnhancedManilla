@@ -2,6 +2,8 @@ scoreboard objectives add timer dummy
 scoreboard objectives add health dummy
 scoreboard objectives add count dummy
 scoreboard objectives add distance dummy
+scoreboard objectives add operation dummy
+scoreboard objectives add operation1 dummy
 
 scoreboard objectives add click minecraft.used:minecraft.warped_fungus_on_a_stick
 

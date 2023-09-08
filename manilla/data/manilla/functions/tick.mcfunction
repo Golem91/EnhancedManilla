@@ -79,7 +79,9 @@ execute as @a run function manilla:mana/manabar
 scoreboard players set @a[gamemode=creative] mana 100
 
 #>raycasting
-execute as @a[nbt={SelectedItem:{tag:{CustomModelData:1}}},predicate=manilla:click,predicate=manilla:breaker_basic] at @s run function manilla:ray/summon
+execute as @a[predicate=manilla:click,predicate=manilla:breaker_basic,predicate=manilla:breaker_basic_mana] at @s run function manilla:ray/summon
+execute as @a[predicate=manilla:click,predicate=manilla:breaker_advanced,predicate=manilla:breaker_advanced_mana] at @s run function manilla:ray/summon
+execute as @a[predicate=manilla:click,predicate=manilla:breaker_elite,predicate=manilla:breaker_elite_mana] at @s run function manilla:ray/summon
 execute as @e[type=armor_stand,tag=raycast] at @s if block ~ ~ ~ #manilla:permeable run tp @s ^ ^ ^0.5
 execute as @e[type=armor_stand,tag=raycast] at @s if block ~ ~ ~ #manilla:permeable run particle minecraft:dust 0.533 0.000 0.839 0.3 ~ ~ ~ 0 0 0 5 5 normal
 execute as @e[type=armor_stand,tag=raycast] run scoreboard players add @s distance 1
@@ -89,9 +91,13 @@ execute as @e[type=armor_stand,tag=raycast] at @s if block ~ ~ ~ #manilla:permea
 execute as @e[type=armor_stand,tag=raycast] run scoreboard players add @s distance 1
 execute as @e[type=armor_stand,tag=raycast] at @s unless block ~ ~ ~ #manilla:permeable run function manilla:ray/kill
 #failed to execute of too less mana
-execute as @a[nbt={SelectedItem:{tag:{CustomModelData:1}}},predicate=manilla:click,predicate=!manilla:breaker_basic] at @s run playsound minecraft:entity.skeleton.step block @s ~ ~ ~
+execute as @a[predicate=manilla:click,predicate=manilla:breaker_basic,predicate=!manilla:breaker_basic_mana] at @s run playsound minecraft:entity.skeleton.step block @s ~ ~ ~
+execute as @a[predicate=manilla:click,predicate=manilla:breaker_advanced,predicate=!manilla:breaker_advanced_mana] at @s run playsound minecraft:entity.skeleton.step block @s ~ ~ ~
+execute as @a[predicate=manilla:click,predicate=manilla:breaker_elite,predicate=!manilla:breaker_elite_mana] at @s run playsound minecraft:entity.skeleton.step block @s ~ ~ ~
 #max distance for raycasting distance=... /2 =>25 blocks
 execute as @e[type=armor_stand,tag=raycast,scores={distance=50..}] run kill @s
+#not selected detection
+execute as @a[predicate=!manilla:breaker_basic,predicate=!manilla:breaker_advanced,predicate=!manilla:breaker_elite] run function manilla:ray/delete/check
 #break block detection
 execute as @e[type=minecraft:interaction,nbt={attack:{}}] at @s run function manilla:ray/leftclick
 #modify block detection
