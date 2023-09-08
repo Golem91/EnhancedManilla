@@ -95,7 +95,7 @@ execute as @e[type=armor_stand,tag=raycast,scores={distance=50..}] run kill @s
 #break block detection
 execute as @e[type=minecraft:interaction,nbt={attack:{}}] at @s run function manilla:ray/leftclick
 #modify block detection
-
+execute as @e[type=minecraft:interaction,nbt={interaction:{}}] at @s run function manilla:ray/rightclick
 #display particles at selected block location
 execute as @e[type=interaction,tag=marker] unless score @s count matches 0.. unless score @s count matches ..0 run scoreboard players set @s count 0
 execute as @e[type=interaction,tag=marker] at @s if score @s count matches 0 run function manilla:ray/particle {color:"0.533 0.000 0.839"}
