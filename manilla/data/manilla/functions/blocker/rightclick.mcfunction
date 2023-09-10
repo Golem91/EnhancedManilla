@@ -9,6 +9,8 @@ execute on target unless predicate manilla:sneaking run tag @s add nonsneaking
 execute on target if predicate manilla:sneaking run tag @s add sneaking
 #break blocks
 function manilla:blocker/modify/init with storage manilla:interaction
+#do damage sachen zwollong wird das richtig gut gefallen tun
+execute on passengers on origin run scoreboard players operation @s cd_manualDamage = @s number
 #kill entities
 #function manilla:blocker/interaction/kill with storage manilla:interaction
 #clear block of interaction

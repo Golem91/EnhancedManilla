@@ -1,5 +1,6 @@
 {
     "values": [
-    "manilla:tick"
+    "manilla:tick",
+    "uses:main"
  ]
 }

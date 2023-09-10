@@ -80,9 +80,9 @@ scoreboard players set @a[gamemode=creative] mana 1000
 
 #>raycasting blocker
 #summon raycast entity (arrow)
-execute as @a[predicate=manilla:click,predicate=manilla:breaker_basic,predicate=manilla:breaker_basic_mana] at @s run function manilla:blocker/init
-execute as @a[predicate=manilla:click,predicate=manilla:breaker_advanced,predicate=manilla:breaker_advanced_mana] at @s run function manilla:blocker/init
-execute as @a[predicate=manilla:click,predicate=manilla:breaker_elite,predicate=manilla:breaker_elite_mana] at @s run function manilla:blocker/init
+execute as @a[predicate=manilla:click,predicate=!manilla:broke,predicate=manilla:breaker_basic,predicate=manilla:breaker_basic_mana] at @s run function manilla:blocker/init
+execute as @a[predicate=manilla:click,predicate=!manilla:broke,predicate=manilla:breaker_advanced,predicate=manilla:breaker_advanced_mana] at @s run function manilla:blocker/init
+execute as @a[predicate=manilla:click,predicate=!manilla:broke,predicate=manilla:breaker_elite,predicate=manilla:breaker_elite_mana] at @s run function manilla:blocker/init
 #summon interactions a.s.o.
 execute as @e[tag=inGround] at @s run function manilla:blocker/inblock
 #detect raycast entity block hit (inGround:1b)

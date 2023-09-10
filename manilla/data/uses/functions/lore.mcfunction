@@ -1,0 +1,1 @@
+$data modify storage durability:custom item.tag.display.Lore[0] set value '{"text":"Durability: $(Uses) / $(maxUses)","italic":false,"color":"white"}'

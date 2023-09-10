@@ -1,0 +1,27 @@
+[
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      {
+        "text": "Durability: ",
+        "color": "white",
+        "italic": false,
+        "extra": [
+          {
+            "nbt": "item.tag.durability.Uses",
+            "storage": "durability:custom"
+          },
+          {
+            "text": " / "
+          },
+          {
+            "nbt": "item.tag.durability.maxUses",
+            "storage": "durability:custom"
+          }
+        ]
+      }
+    ],
+    "replace": true
+  }
+]

@@ -1,5 +1,6 @@
 {
     "values": [
-    "manilla:load"
+    "manilla:load",
+    "uses:setup"
 ]
 }

@@ -1,7 +1,7 @@
 #> grass and dirt
-execute if entity @a[tag=nonsneaking] if block ~ ~ ~ #manilla:modify/to_farmland run setblock ~ ~ ~ minecraft:farmland
-execute if entity @a[tag=nonsneaking] if block ~ ~ ~ #manilla:modify/to_dirt run setblock ~ ~ ~ minecraft:dirt
-execute if entity @a[tag=sneaking] if block ~ ~ ~ #manilla:modify/to_dirt_path run setblock ~ ~ ~ minecraft:dirt_path
+execute if block ~ ~ ~ #manilla:modify/to_farmland on passengers on origin unless predicate manilla:sneaking run setblock ~ ~ ~ minecraft:farmland
+execute if block ~ ~ ~ #manilla:modify/to_dirt on passengers on origin unless predicate manilla:sneaking run setblock ~ ~ ~ minecraft:dirt
+execute if block ~ ~ ~ #manilla:modify/to_dirt_path on passengers on origin if predicate manilla:sneaking run setblock ~ ~ ~ minecraft:dirt_path
 #> woods
 execute if block ~ ~ ~ #manilla:woods run function manilla:blocker/modify/woods
 #> logs

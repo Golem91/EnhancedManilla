@@ -1,0 +1,1 @@
+$give @s $(id)$(tag) 1
