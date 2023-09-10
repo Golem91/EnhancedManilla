@@ -1,0 +1,1 @@
+$execute as @e[tag=blocker,type=interaction,nbt={Passengers:[{Owner:$(UUID)}]}] at @s run function manilla:blocker/modify/execute

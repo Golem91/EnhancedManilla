@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:warped_fungus_on_a_stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:4,Unbreakable:1b,CustomModelData:1,display:{Name:'{\"translate\":\"blocker.basic.name\",\"fallback\":\"Basic Blocker\",\"with\":[\"de_de\"],\"italic\":false}'}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

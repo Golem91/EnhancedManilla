@@ -1,6 +1,0 @@
-$execute as @s[nbt={UUID:$(UUID)},predicate=!manilla:sneaking,predicate=manilla:breaker_basic] if entity @e[type=interaction,nbt={Passengers:[{ArmorItems:[{},{},{},{tag:{UUID:$(UUID)}}]}]}] run scoreboard players add @s mana 50
-$execute as @s[nbt={UUID:$(UUID)},predicate=!manilla:sneaking,predicate=manilla:breaker_advanced] if entity @e[type=interaction,nbt={Passengers:[{ArmorItems:[{},{},{},{tag:{UUID:$(UUID)}}]}]}] run scoreboard players add @s mana 20
-$execute as @s[nbt={UUID:$(UUID)},predicate=!manilla:sneaking,predicate=manilla:breaker_elite] if entity @e[type=interaction,nbt={Passengers:[{ArmorItems:[{},{},{},{tag:{UUID:$(UUID)}}]}]}] run scoreboard players add @s mana 1
-
-$execute as @s[nbt={UUID:$(UUID)}] unless predicate manilla:sneaking as @e[type=interaction,nbt={Passengers:[{ArmorItems:[{},{},{},{tag:{UUID:$(UUID)}}]}]}] at @s run kill @s
-$execute as @s[nbt={UUID:$(UUID)}] unless predicate manilla:sneaking as @e[type=armor_stand,nbt={ArmorItems:[{},{},{},{tag:{UUID:$(UUID)}}]}] at @s run kill @s
