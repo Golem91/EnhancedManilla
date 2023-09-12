@@ -1,3 +1,4 @@
+tag @s add used
 #> grass and dirt
 execute if block ~ ~ ~ #manilla:modify/to_farmland on passengers on origin unless predicate manilla:sneaking run setblock ~ ~ ~ minecraft:farmland
 execute if block ~ ~ ~ #manilla:modify/to_dirt on passengers on origin unless predicate manilla:sneaking run setblock ~ ~ ~ minecraft:dirt

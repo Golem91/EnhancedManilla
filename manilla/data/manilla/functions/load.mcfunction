@@ -1,6 +1,7 @@
 scoreboard objectives add timer dummy
 scoreboard objectives add health dummy
 scoreboard objectives add count dummy
+scoreboard objectives add ccount dummy
 scoreboard objectives add number dummy
 scoreboard objectives add distance dummy
 scoreboard objectives add operation dummy
