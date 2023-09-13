@@ -1,0 +1,19 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:warped_fungus_on_a_stick",
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{HideFlags:4,CustomModelData:5,durability:{Unbreakable:1b,Uses:1500,maxUses:1500,Sound:1s,manual:1b},display:{Name:'{\"translate\":\"damager.advanced.name\",\"fallback\":\"Advanced Damager\",\"with\":[\"de_de\"],\"italic\":false}'},AttributeModifiers:[{AttributeName:\"generic.attack_damage\",Name:\"generic.attack_damage\",Amount:8,Operation:0,UUID:[I;-909887063,1563443350,-1280088712,-301680580],Slot:\"mainhand\"},{AttributeName:\"generic.attack_speed\",Name:\"generic.attack_speed\",Amount:2,Operation:0,UUID:[I;1479230491,-2120921653,-1432107421,-1938424223],Slot:\"mainhand\"}]}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

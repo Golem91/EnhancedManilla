@@ -2,11 +2,11 @@
   {
     "condition": "minecraft:location_check",
     "offsetX": 1,
-    "offsetZ": 1,
+    
     "predicate": {
       "block": {
         "blocks": [
-          "minecraft:potted_allium"
+          "minecraft:potted_blue_orchid"
         ]
       }
     }
@@ -14,11 +14,11 @@
   {
     "condition": "minecraft:location_check",
     "offsetX": -1,
-    "offsetZ": 1,
+    
     "predicate": {
       "block": {
         "blocks": [
-          "minecraft:potted_allium"
+          "minecraft:potted_blue_orchid"
         ]
       }
     }
@@ -26,11 +26,11 @@
   {
     "condition": "minecraft:location_check",
     "offsetY": 1,
-    "offsetZ": 1,
+    
     "predicate": {
       "block": {
         "blocks": [
-          "minecraft:potted_allium"
+          "minecraft:potted_blue_orchid"
         ]
       }
     }
@@ -38,11 +38,11 @@
   {
     "condition": "minecraft:location_check",
     "offsetY": -1,
-    "offsetZ": 1,
+    
     "predicate": {
       "block": {
         "blocks": [
-          "minecraft:potted_allium"
+          "minecraft:potted_blue_orchid"
         ]
       }
     }
@@ -51,11 +51,11 @@
     "condition": "minecraft:location_check",
     "offsetX": 1,
     "offsetY": 1,
-    "offsetZ": 1,
+    
     "predicate": {
       "block": {
         "blocks": [
-          "minecraft:potted_allium"
+          "minecraft:potted_blue_orchid"
         ]
       }
     }
@@ -64,11 +64,11 @@
     "condition": "minecraft:location_check",
     "offsetX": -1,
     "offsetY": 1,
-    "offsetZ": 1,
+    
     "predicate": {
       "block": {
         "blocks": [
-          "minecraft:potted_allium"
+          "minecraft:potted_blue_orchid"
         ]
       }
     }
@@ -77,11 +77,11 @@
     "condition": "minecraft:location_check",
     "offsetX": 1,
     "offsetY": -1,
-    "offsetZ": 1,
+    
     "predicate": {
       "block": {
         "blocks": [
-          "minecraft:potted_allium"
+          "minecraft:potted_blue_orchid"
         ]
       }
     }
@@ -90,20 +90,12 @@
     "condition": "minecraft:location_check",
     "offsetX": -1,
     "offsetY": -1,
-    "offsetZ": 1,
+    
     "predicate": {
       "block": {
         "blocks": [
-          "minecraft:potted_allium"
+          "minecraft:potted_blue_orchid"
         ]
-      }
-    }
-  },
-  {
-    "condition": "minecraft:location_check",
-    "predicate": {
-      "fluid": {
-        "fluid": "minecraft:water"
       }
     }
   }

@@ -16,3 +16,7 @@ function uses:lore with storage durability:custom item.tag.durability
 
 execute if score @s cd_sound matches 0 at @s run playsound minecraft:item.shield.break master @s ~ ~ ~ 1
 execute if score @s cd_sound matches 1 at @s run playsound minecraft:block.beacon.deactivate master @s ~ ~ ~ 0.2
+
+execute if score @s cd_sound matches 1 if predicate manilla:damager/basic run item modify entity @s weapon.mainhand manilla:dull/basic
+execute if score @s cd_sound matches 1 if predicate manilla:damager/advanced run item modify entity @s weapon.mainhand manilla:dull/advanced
+execute if score @s cd_sound matches 1 if predicate manilla:damager/elite run item modify entity @s weapon.mainhand manilla:dull/elite

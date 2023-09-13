@@ -13,8 +13,8 @@ execute if entity @s[predicate=manilla:fortunel] as @e[type=arrow,tag=init] run 
 execute if entity @s[predicate=manilla:fortunell] as @e[type=arrow,tag=init] run tag @s add fortunell
 execute if entity @s[predicate=manilla:fortunelll] as @e[type=arrow,tag=init] run tag @s add fortunelll
 #get tier
-execute if entity @s[predicate=manilla:breaker_basic] as @e[type=arrow,tag=init] run tag @s add basic
-execute if entity @s[predicate=manilla:breaker_advanced] as @e[type=arrow,tag=init] run tag @s add advanced
-execute if entity @s[predicate=manilla:breaker_elite] as @e[type=arrow,tag=init] run tag @s add elite
+execute if entity @s[predicate=manilla:blocker/basic] as @e[type=arrow,tag=init] run tag @s add basic
+execute if entity @s[predicate=manilla:blocker/advanced] as @e[type=arrow,tag=init] run tag @s add advanced
+execute if entity @s[predicate=manilla:blocker/elite] as @e[type=arrow,tag=init] run tag @s add elite
 #remove init tag
 tag @e[tag=blocker,tag=init,tag=ray] remove init

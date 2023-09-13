@@ -6,7 +6,9 @@ scoreboard objectives add number dummy
 scoreboard objectives add distance dummy
 scoreboard objectives add operation dummy
 scoreboard objectives add operation1 dummy
+scoreboard objectives add age dummy
 
+scoreboard objectives add jump minecraft.custom:minecraft.jump
 scoreboard objectives add click minecraft.used:minecraft.warped_fungus_on_a_stick
 
 scoreboard objectives add PosX dummy
@@ -16,6 +18,10 @@ scoreboard objectives add RotX dummy
 scoreboard objectives add RotY dummy
 scoreboard objectives add RotCorX dummy
 scoreboard objectives add RotCorY dummy
+scoreboard objectives add MotionX dummy
+scoreboard objectives add MotionY dummy
+scoreboard objectives add MotionZ dummy
+scoreboard objectives add DropY dummy
 
 scoreboard players set ?RotCorr RotCorX -1
 scoreboard players set ?RotCorr RotCorY -1

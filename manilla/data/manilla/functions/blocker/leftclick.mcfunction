@@ -13,6 +13,7 @@ execute if score @s count matches 3 run function manilla:blocker/break/particles
 execute if score @s count matches 4 run function manilla:blocker/break/particles {color:"0.839 0 0 "}
 #break block/-s when hit 4 times
 execute if score @s count matches 4.. run function manilla:blocker/break with storage manilla:interaction
+execute if entity @s[tag=damager.hit] run function manilla:blocker/break with storage manilla:interaction
 
 #Data for color values
 #0.533 0.000 0.839  > stage 1

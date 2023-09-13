@@ -1,0 +1,1 @@
+$execute as @e[type=arrow,tag=damager,nbt={Owner:$(UUID)}] at @s run function manilla:damager/tp/tp

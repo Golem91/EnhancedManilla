@@ -1,0 +1,13 @@
+{
+  "function": "minecraft:set_attributes",
+  "modifiers": [
+    {
+      "attribute": "minecraft:generic.attack_damage",
+      "name": "generic.attack_damage",
+      "amount": -20,
+      "operation": "addition",
+      "id": "d772dd42-7918-41da-8ecd-6f956c8890f0",
+      "slot": "mainhand"
+    }
+  ]
+}

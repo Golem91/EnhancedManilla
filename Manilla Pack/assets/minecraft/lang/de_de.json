@@ -1,5 +1,9 @@
 {
+  "block.minecraft.warped_fungus": "Humungus Chungus on a Fungus playing Among Us",
   "blocker.basic.name": "Einfacher Blockifizierer",
   "blocker.advanced.name": "Verbesserter Blockifizierer",
-  "blocker.elite.name": "Krasser Blockifizierer"
+  "blocker.elite.name": "Krasser Blockifizierer",
+  "damager.basic.name": "Einfacher Schaden",
+  "damager.advanced.name": "Verbesserter Schaden",
+  "damager.elite.name": "Krasser Schaden"
 }
