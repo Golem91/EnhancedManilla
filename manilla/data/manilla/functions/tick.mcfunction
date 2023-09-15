@@ -80,19 +80,27 @@ scoreboard players set @a[gamemode=creative] mana 1000
 
 #>blocker
 #summon raycast entity (arrow)
-execute as @a[predicate=manilla:click,predicate=!manilla:broke,predicate=manilla:blocker/basic,predicate=manilla:blocker/basic_mana] at @s run function manilla:blocker/init
-execute as @a[predicate=manilla:click,predicate=!manilla:broke,predicate=manilla:blocker/advanced,predicate=manilla:blocker/advanced_mana] at @s run function manilla:blocker/init
-execute as @a[predicate=manilla:click,predicate=!manilla:broke,predicate=manilla:blocker/elite,predicate=manilla:blocker/elite_mana] at @s run function manilla:blocker/init
+execute as @a[predicate=manilla:click,predicate=!manilla:sneaking,predicate=!manilla:broke,predicate=manilla:blocker/basic,predicate=manilla:blocker/basic_mana] at @s run function manilla:blocker/init
+execute as @a[predicate=manilla:click,predicate=!manilla:sneaking,predicate=!manilla:broke,predicate=manilla:blocker/advanced,predicate=manilla:blocker/advanced_mana] at @s run function manilla:blocker/init
+execute as @a[predicate=manilla:click,predicate=!manilla:sneaking,predicate=!manilla:broke,predicate=manilla:blocker/elite,predicate=manilla:blocker/elite_mana] at @s run function manilla:blocker/init
+#summon raycast for block breaking
+execute as @a[predicate=manilla:click,predicate=!manilla:sneaking,predicate=!manilla:broke,predicate=manilla:blocker/basic1] at @s run function manilla:damager/summon_blocker
+execute as @a[predicate=manilla:click,predicate=!manilla:sneaking,predicate=!manilla:broke,predicate=manilla:blocker/advanced1] at @s run function manilla:damager/summon_blocker
+execute as @a[predicate=manilla:click,predicate=!manilla:sneaking,predicate=!manilla:broke,predicate=manilla:blocker/elite1] at @s run function manilla:damager/summon_blocker
+#break blocks at target
+execute as @e[type=arrow,tag=bleaker,nbt={inGround:1b},tag=rotated] at @s positioned ^ ^ ^0.06 run function manilla:blocker/kill
+execute as @e[type=arrow,tag=bleaker,nbt={inGround:1b}] at @s run function manilla:damager/rotate
+
 #summon interactions a.s.o.
 execute as @e[tag=inGround] at @s run function manilla:blocker/inblock
 #detect raycast entity block hit (inGround:1b)
 execute as @e[type=arrow,tag=blocker,tag=ray,tag=!inGround,nbt={inGround:1b}] at @s run function manilla:blocker/inblock_rotate
 #failed to execute of too less mana
-execute as @a[predicate=manilla:click,predicate=manilla:blocker/basic,predicate=!manilla:blocker/basic_mana] at @s run playsound minecraft:entity.skeleton.step block @s ~ ~ ~
-execute as @a[predicate=manilla:click,predicate=manilla:blocker/advanced,predicate=!manilla:blocker/advanced_mana] at @s run playsound minecraft:entity.skeleton.step block @s ~ ~ ~
-execute as @a[predicate=manilla:click,predicate=manilla:blocker/elite,predicate=!manilla:blocker/elite_mana] at @s run playsound minecraft:entity.skeleton.step block @s ~ ~ ~
+execute as @a[predicate=manilla:click,predicate=!manilla:sneaking,predicate=manilla:blocker/basic,predicate=!manilla:blocker/basic_mana] at @s run playsound minecraft:entity.skeleton.step block @s ~ ~ ~
+execute as @a[predicate=manilla:click,predicate=!manilla:sneaking,predicate=manilla:blocker/advanced,predicate=!manilla:blocker/advanced_mana] at @s run playsound minecraft:entity.skeleton.step block @s ~ ~ ~
+execute as @a[predicate=manilla:click,predicate=!manilla:sneaking,predicate=manilla:blocker/elite,predicate=!manilla:blocker/elite_mana] at @s run playsound minecraft:entity.skeleton.step block @s ~ ~ ~
 #not selected detection
-execute as @a[predicate=!manilla:blocker/basic,predicate=!manilla:blocker/advanced,predicate=!manilla:blocker/elite,predicate=!manilla:damager/basic,predicate=!manilla:damager/advanced,predicate=!manilla:damager/elite] run function manilla:blocker/unselect
+execute as @a[predicate=!manilla:blocker/basic,predicate=!manilla:blocker/advanced,predicate=!manilla:blocker/elite,predicate=!manilla:blocker/basic1,predicate=!manilla:blocker/advanced1,predicate=!manilla:blocker/elite1] run function manilla:blocker/unselect
 #break block detection
 execute as @e[type=minecraft:interaction,tag=blocker,nbt={attack:{}}] at @s run function manilla:blocker/leftclick
 execute as @e[type=minecraft:interaction,tag=blocker,tag=damager.hit] at @s run function manilla:blocker/leftclick
@@ -105,6 +113,14 @@ execute as @e[type=interaction,tag=blocker] at @s if score @s count matches 1 ru
 execute as @e[type=interaction,tag=blocker] at @s if score @s count matches 2 run function manilla:blocker/particle {color:"0.839 0 0.349"}
 execute as @e[type=interaction,tag=blocker] at @s if score @s count matches 3 run function manilla:blocker/particle {color:"0.839 0 0"}
 
+execute as @e[predicate=manilla:click,predicate=manilla:sneaking,predicate=manilla:blocker/basic] run function manilla:blocker/switch
+execute as @e[predicate=manilla:click,predicate=manilla:sneaking,predicate=manilla:blocker/advanced] run function manilla:blocker/switch
+execute as @e[predicate=manilla:click,predicate=manilla:sneaking,predicate=manilla:blocker/elite] run function manilla:blocker/switch
+execute as @e[predicate=manilla:click,predicate=manilla:sneaking,tag=!switch,predicate=manilla:blocker/basic1] run function manilla:blocker/switchb
+execute as @e[predicate=manilla:click,predicate=manilla:sneaking,tag=!switch,predicate=manilla:blocker/advanced1] run function manilla:blocker/switchb
+execute as @e[predicate=manilla:click,predicate=manilla:sneaking,tag=!switch,predicate=manilla:blocker/elite1] run function manilla:blocker/switchb
+
+tag @a remove switch
 
 #particles!!!
 execute as @e[type=arrow,tag=!blocker] at @s run particle dust_color_transition 0.412 0.110 0.678 1 0.188 1.000 0.431 ~ ~ ~ 0 0 0 1 5 normal
@@ -115,8 +131,8 @@ execute as @e[type=arrow,tag=blocker,tag=ray] at @s run particle minecraft:dust 
 execute as @a[predicate=!manilla:broke,predicate=manilla:click,predicate=manilla:damager/basic,predicate=manilla:damager/basic_mana] at @s run function manilla:damager/summon
 execute as @a[predicate=!manilla:broke,predicate=manilla:click,predicate=manilla:damager/advanced,predicate=manilla:damager/advanced_mana] at @s run function manilla:damager/summon
 execute as @a[predicate=!manilla:broke,predicate=manilla:click,predicate=manilla:damager/elite,predicate=manilla:damager/elite_mana] at @s run function manilla:damager/summon
-execute as @e[type=arrow,tag=damager,nbt={inGround:1b},tag=rotated] at @s positioned ^ ^ ^0.06 run function manilla:damager/kill
-execute as @e[type=arrow,tag=damager,nbt={inGround:1b}] at @s run function manilla:damager/rotate
+#execute as @e[type=arrow,tag=damager,nbt={inGround:1b},tag=rotated] at @s positioned ^ ^ ^0.06 run function manilla:damager/kill
+#execute as @e[type=arrow,tag=damager,nbt={inGround:1b}] at @s run function manilla:damager/rotate
 execute as @e[type=arrow,tag=damager,tag=ray] at @s unless entity @e[type=interaction,tag=blocker,sort=nearest,limit=1,distance=..1] run function manilla:damager/bounce/init
 execute as @a[scores={ddealt=1..}] run scoreboard players add @s cd_manualDamage 1
 scoreboard players reset @a ddealt
@@ -126,6 +142,15 @@ execute as @a[predicate=manilla:damager/advanced,predicate=manilla:jump,scores={
 execute as @a[predicate=manilla:damager/elite,predicate=manilla:jump,scores={mana=5..}] run function manilla:damager/tp/init
 
 execute as @e[tag=damager] run function manilla:damager/drop
+#execute as @e[tag=bleaker] run function manilla:damager/drop
+
+#deselect when item in offhand
+execute as @a[predicate=manilla:air,predicate=manilla:offhand/basic] run function manilla:blocker/offhand
+execute as @a[predicate=manilla:air,predicate=manilla:offhand/advanced] run function manilla:blocker/offhand
+execute as @a[predicate=manilla:air,predicate=manilla:offhand/elite] run function manilla:blocker/offhand
+execute as @a[predicate=manilla:air,predicate=manilla:offhand/basic1] run function manilla:blocker/offhand
+execute as @a[predicate=manilla:air,predicate=manilla:offhand/advanced1] run function manilla:blocker/offhand
+execute as @a[predicate=manilla:air,predicate=manilla:offhand/elite1] run function manilla:blocker/offhand
 
 #kill arrows
 kill @e[tag=ray,tag=blocker,scores={age=25..}]

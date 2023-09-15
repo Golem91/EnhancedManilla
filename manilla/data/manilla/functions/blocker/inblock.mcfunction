@@ -5,10 +5,10 @@ execute if entity @s[tag=basic] on origin run tag @s add basic
 execute if entity @s[tag=advanced] on origin run tag @s add advanced
 execute if entity @s[tag=elite] on origin run tag @s add elite
 #revoke mana
-execute on origin unless predicate manilla:sneaking run function manilla:blocker/interaction/count with storage manilla:uuid
-execute on origin unless predicate manilla:sneaking run function manilla:blocker/mana/revoke
+#execute on origin unless predicate manilla:sneaking run function manilla:blocker/interaction/count with storage manilla:uuid
+#execute on origin unless predicate manilla:sneaking run function manilla:blocker/mana/revoke
 #kill interaction if Owner is not sneaking
-execute on origin unless predicate manilla:sneaking run function manilla:blocker/interaction/kill with storage manilla:uuid
+#execute on origin unless predicate manilla:sneaking run function manilla:blocker/interaction/kill with storage manilla:uuid
 #get number of interaction entities
 function manilla:blocker/interaction/count with storage manilla:uuid
 #execute to specific counts
@@ -23,7 +23,7 @@ execute if entity @s[tag=able,tag=elite] on origin run function manilla:blocker/
 #positive feedback
 execute if entity @s[tag=able] run playsound minecraft:entity.item_frame.remove_item block @a ~ ~ ~
 #negative feedback
-execute unless entity @s[tag=able] run playsound minecraft:entity.skeleton.step block @s ~ ~ ~
+execute unless entity @s[tag=able] run playsound minecraft:entity.skeleton.step block @a ~ ~ ~
 #kill raycast entity
 kill @s
 

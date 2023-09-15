@@ -1,0 +1,14 @@
+{
+  "function": "minecraft:copy_nbt",
+  "source": {
+    "type": "minecraft:storage",
+    "source": "manilla:item"
+  },
+  "ops": [
+    {
+      "source": "Item",
+      "target": "{}",
+      "op": "merge"
+    }
+  ]
+}

@@ -33,6 +33,10 @@ execute as @s[tag=ground,tag=!bounceY] store result entity @s Motion[1] double 0
 execute as @s[tag=ground,tag=bounceZ] store result entity @s Motion[2] double -0.000001 run scoreboard players get @s MotionZ
 execute as @s[tag=ground,tag=!bounceZ] store result entity @s Motion[2] double 0.000001 run scoreboard players get @s MotionZ
 
+execute as @e[tag=bounceX] at @s run playsound minecraft:block.amethyst_block.hit block @a ~ ~ ~ 
+execute as @e[tag=bounceY] at @s run playsound minecraft:block.amethyst_block.hit block @a ~ ~ ~ 
+execute as @e[tag=bounceZ] at @s run playsound minecraft:block.amethyst_block.hit block @a ~ ~ ~ 
+
 tag @s[tag=ground,tag=bounceX] remove bounceX
 tag @s[tag=ground,tag=bounceY] remove bounceY
 tag @s[tag=ground,tag=bounceZ] remove bounceZ
