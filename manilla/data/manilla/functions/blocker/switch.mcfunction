@@ -7,4 +7,6 @@ item replace entity @s[predicate=manilla:blocker/elite] weapon.mainhand with war
 
 item modify entity @s weapon.mainhand manilla:tag_copy
 
+playsound minecraft:item.dye.use block @s ~ ~ ~
+
 tag @s add switch

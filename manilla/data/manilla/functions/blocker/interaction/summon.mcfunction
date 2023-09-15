@@ -1,5 +1,6 @@
 #summon interaction entity
 execute align xyz run summon minecraft:interaction ~0.5 ~ ~0.5 {width:1.02f,height:1.02f,Passengers:[{id:"minecraft:arrow",NoGravity:1b,pickup:0b,damage:0,PierceLevel:100b,Silent:1b,crit:0b,Tags:["blocker","init"]}],Tags:["blocker"]}
+execute align xyz run summon item_display ~0.5 ~0.5 ~0.5 {NoGravity:1b,Glowing:1b,shadow_radius:0f,shadow_strength:0f,glow_color_override:0b,Tags:["blocker"],brightness:{sky:5,block:5},item:{id:"minecraft:black_dye",Count:1b,tag:{CustomModelData:1}}}
 #transfer UUID to arrow passenger
 execute on origin run data modify entity @e[type=arrow,tag=init,limit=1] Owner set from entity @s UUID
 #transfer enchantments

@@ -22,3 +22,5 @@ item replace entity @s weapon.offhand with minecraft:air
 tag @s remove basic1
 tag @s remove advanced1
 tag @s remove elite1
+
+playsound minecraft:item.dye.use block @s ~ ~ ~

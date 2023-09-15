@@ -1,6 +1,6 @@
 kill @e[tag=bleaker,tag=ray]
 summon minecraft:marker ~ ~ ~ {Tags:["direction"]}
-execute as @e[tag=direction] positioned 0.0 0.0 0.0 run function manilla:damager/get_position
+execute as @e[tag=direction] positioned 0.0 0.0 0.0 run function manilla:damager/get_position_fast
 execute anchored eyes run summon minecraft:arrow ^ ^ ^0.5 {Tags:["bleaker","init","ray"],NoGravity:1b,Silent:1b,pickup:0b,damage:0}
 
 data modify entity @e[type=arrow,tag=init,limit=1] Motion.[0] set from storage manilla:direction PosX

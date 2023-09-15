@@ -108,17 +108,17 @@ execute as @e[type=minecraft:interaction,tag=blocker,tag=damager.hit] at @s run 
 execute as @e[type=minecraft:interaction,tag=blocker,nbt={interaction:{}}] at @s run function manilla:blocker/rightclick
 #display particles at selected block location
 execute as @e[type=interaction,tag=blocker] unless score @s count matches 0.. unless score @s count matches ..0 run scoreboard players set @s count 0
-execute as @e[type=interaction,tag=blocker] at @s if score @s count matches 0 run function manilla:blocker/particle {color:"0.533 0.000 0.839"}
-execute as @e[type=interaction,tag=blocker] at @s if score @s count matches 1 run function manilla:blocker/particle {color:"0.839 0 0.796"}
-execute as @e[type=interaction,tag=blocker] at @s if score @s count matches 2 run function manilla:blocker/particle {color:"0.839 0 0.349"}
-execute as @e[type=interaction,tag=blocker] at @s if score @s count matches 3 run function manilla:blocker/particle {color:"0.839 0 0"}
+#execute as @e[type=interaction,tag=blocker] at @s if score @s count matches 0 run function manilla:blocker/particle {color:"0.533 0.000 0.839"}
+#execute as @e[type=interaction,tag=blocker] at @s if score @s count matches 1 run function manilla:blocker/particle {color:"0.839 0 0.796"}
+#execute as @e[type=interaction,tag=blocker] at @s if score @s count matches 2 run function manilla:blocker/particle {color:"0.839 0 0.349"}
+#execute as @e[type=interaction,tag=blocker] at @s if score @s count matches 3 run function manilla:blocker/particle {color:"0.839 0 0"}
 
-execute as @e[predicate=manilla:click,predicate=manilla:sneaking,predicate=manilla:blocker/basic] run function manilla:blocker/switch
-execute as @e[predicate=manilla:click,predicate=manilla:sneaking,predicate=manilla:blocker/advanced] run function manilla:blocker/switch
-execute as @e[predicate=manilla:click,predicate=manilla:sneaking,predicate=manilla:blocker/elite] run function manilla:blocker/switch
-execute as @e[predicate=manilla:click,predicate=manilla:sneaking,tag=!switch,predicate=manilla:blocker/basic1] run function manilla:blocker/switchb
-execute as @e[predicate=manilla:click,predicate=manilla:sneaking,tag=!switch,predicate=manilla:blocker/advanced1] run function manilla:blocker/switchb
-execute as @e[predicate=manilla:click,predicate=manilla:sneaking,tag=!switch,predicate=manilla:blocker/elite1] run function manilla:blocker/switchb
+execute as @e[predicate=manilla:click,predicate=manilla:sneaking,predicate=manilla:blocker/basic] at @s run function manilla:blocker/switch
+execute as @e[predicate=manilla:click,predicate=manilla:sneaking,predicate=manilla:blocker/advanced] at @s run function manilla:blocker/switch
+execute as @e[predicate=manilla:click,predicate=manilla:sneaking,predicate=manilla:blocker/elite] at @s run function manilla:blocker/switch
+execute as @e[predicate=manilla:click,predicate=manilla:sneaking,tag=!switch,predicate=manilla:blocker/basic1] at @s run function manilla:blocker/switchb
+execute as @e[predicate=manilla:click,predicate=manilla:sneaking,tag=!switch,predicate=manilla:blocker/advanced1] at @s run function manilla:blocker/switchb
+execute as @e[predicate=manilla:click,predicate=manilla:sneaking,tag=!switch,predicate=manilla:blocker/elite1] at @s run function manilla:blocker/switchb
 
 tag @a remove switch
 
@@ -145,12 +145,12 @@ execute as @e[tag=damager] run function manilla:damager/drop
 #execute as @e[tag=bleaker] run function manilla:damager/drop
 
 #deselect when item in offhand
-execute as @a[predicate=manilla:air,predicate=manilla:offhand/basic] run function manilla:blocker/offhand
-execute as @a[predicate=manilla:air,predicate=manilla:offhand/advanced] run function manilla:blocker/offhand
-execute as @a[predicate=manilla:air,predicate=manilla:offhand/elite] run function manilla:blocker/offhand
-execute as @a[predicate=manilla:air,predicate=manilla:offhand/basic1] run function manilla:blocker/offhand
-execute as @a[predicate=manilla:air,predicate=manilla:offhand/advanced1] run function manilla:blocker/offhand
-execute as @a[predicate=manilla:air,predicate=manilla:offhand/elite1] run function manilla:blocker/offhand
+execute as @a[predicate=manilla:air,predicate=manilla:offhand/basic] at @s run function manilla:blocker/offhand
+execute as @a[predicate=manilla:air,predicate=manilla:offhand/advanced] at @s run function manilla:blocker/offhand
+execute as @a[predicate=manilla:air,predicate=manilla:offhand/elite] at @s run function manilla:blocker/offhand
+execute as @a[predicate=manilla:air,predicate=manilla:offhand/basic1] at @s run function manilla:blocker/offhand
+execute as @a[predicate=manilla:air,predicate=manilla:offhand/advanced1] at @s run function manilla:blocker/offhand
+execute as @a[predicate=manilla:air,predicate=manilla:offhand/elite1] at @s run function manilla:blocker/offhand
 
 #kill arrows
 kill @e[tag=ray,tag=blocker,scores={age=25..}]

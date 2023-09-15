@@ -6,3 +6,5 @@ item replace entity @s[predicate=manilla:blocker/advanced1] weapon.mainhand with
 item replace entity @s[predicate=manilla:blocker/elite1] weapon.mainhand with warped_fungus_on_a_stick{CustomModelData:3}
 
 item modify entity @s weapon.mainhand manilla:tag_copy
+
+playsound minecraft:item.dye.use block @s ~ ~ ~
